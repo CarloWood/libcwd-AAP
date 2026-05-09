@@ -1,0 +1,1 @@
+Remove the obsolete Autotools build machinery and generated/legacy packaging references that are only needed by configure or automake, while keeping source files, CMake modules, tests, and install artifacts required by the CMake build.

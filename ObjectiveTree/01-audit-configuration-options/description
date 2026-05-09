@@ -1,0 +1,1 @@
+Identify the project-level configuration options exposed by the existing Autotools and CMake build systems, including defaults and notable mismatches, so refactoring decisions can start from an accurate option inventory.

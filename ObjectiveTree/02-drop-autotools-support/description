@@ -1,0 +1,1 @@
+Remove Autotools support from the project while preserving the actively used CMake configuration behavior and avoiding accidental loss of configuration features that still matter.
