@@ -1,0 +1,1 @@
+Make the threaded libcwd_r implementation the only supported library variant by removing non-threaded build assumptions, dead LIBCWD_THREAD_SAFE false branches, and documentation or packaging references to the old non-threaded libcwd variant.

@@ -1,0 +1,1 @@
+Remove malloc/allocation debugging as a supported feature, including its CMake options, compile-time configuration macros, redzone/magic/marker support, allocator interception implementation, documentation, and tests that only validate allocation debugging.
