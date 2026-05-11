@@ -1,0 +1,1 @@
+Convert each legacy/manual program in tests/ into an equivalent CTest-backed test under testsuite/ctest, preserving the libcwd API behavior being exercised while updating each test to use current, correct libcwd usage patterns and deterministic output checks.

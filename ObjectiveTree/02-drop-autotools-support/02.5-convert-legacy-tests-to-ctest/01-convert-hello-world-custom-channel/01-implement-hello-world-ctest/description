@@ -1,0 +1,8 @@
+Create the hello-world CTest under testsuite/ctest using the same custom-channel structure as example-project: a test-local debug header defines DEBUGCHANNELS to an application namespace, includes <libcwd/debug.h>, imports libcwd::channels::dc into that namespace’s dc scope, and declares extern channel_ct hello; a separate translation unit includes sys.h and that header and defines channel_ct hello("HELLO") in the same dc namespace. The test executable should capture libcw_do output in memory, call check_configuration(), set libcw_do’s ostream to the capture stream, turn libcw_do on, call read_rcfile(), call list_channels_on(libcw_do), then emit Dout(dc::hello, "Hello World!"). Register it as CTest name hello_world_debug_output with LIBCWD_RCFILE_OVERRIDE_NAME set to $REPOROOT/testsuite/ctest/support/libcwdrc_hello-override; if read_rcfile requires a readable base rcfile first, add a minimal support/libcwdrc_hello-base and set LIBCWD_RCFILE_NAME to it. The override rcfile must leave BFD, DEBUG, HELLO, and SYSTEM enabled and NOTICE and WARNING disabled. Verify the captured output exactly equals:
+BFD     : Enabled
+DEBUG   : Enabled
+HELLO   : Enabled
+NOTICE  : Disabled
+SYSTEM  : Enabled
+WARNING : Disabled
+HELLO   : Hello World!
