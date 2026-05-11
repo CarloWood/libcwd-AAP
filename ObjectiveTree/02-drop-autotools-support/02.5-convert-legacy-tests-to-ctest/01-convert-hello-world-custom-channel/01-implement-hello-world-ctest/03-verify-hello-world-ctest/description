@@ -1,1 +1,0 @@
-Verify the hello-world CTest by building its target and running ctest --test-dir "$BUILDDIR" -R hello_world_debug_output --output-on-failure. The test passes only if the captured output contains exactly BFD, DEBUG, HELLO, NOTICE, SYSTEM, and WARNING in sorted channel order with HELLO enabled, NOTICE and WARNING disabled, and a final HELLO "Hello World!" debug line.

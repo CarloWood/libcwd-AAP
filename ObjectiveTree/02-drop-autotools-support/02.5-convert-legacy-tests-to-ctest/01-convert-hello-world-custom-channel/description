@@ -1,1 +1,0 @@
-Add a CTest-backed hello-world debug-output test that correctly declares and defines a custom HELLO debug channel, runs with LIBCWD_RCFILE_OVERRIDE_NAME pointing at testsuite/ctest/support/libcwdrc_hello-override, and verifies that the rcfile leaves BFD, DEBUG, HELLO, and SYSTEM enabled, NOTICE and WARNING disabled, and emits exactly “HELLO   : Hello World!”.
