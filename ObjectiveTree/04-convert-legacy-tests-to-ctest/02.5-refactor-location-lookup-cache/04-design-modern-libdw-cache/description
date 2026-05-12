@@ -1,0 +1,1 @@
+Design a modern C++ object/symbol/location cache built during initialization from all relevant object files, selecting the libdw APIs and data model needed to resolve addresses accurately, including inline function source locations rather than merely expansion sites.

@@ -1,0 +1,1 @@
+Determine how libcwd is initialized today, including constructor-time hooks, malloc and dlopen interception history, and whether initialization is guaranteed before user global constructors; decide whether an explicit user-callable initialization entry point is needed.

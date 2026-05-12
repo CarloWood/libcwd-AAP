@@ -1,0 +1,1 @@
+Identify where dwarf.cc and related code currently store object, symbol, compilation-unit, line-table, and address lookup data, and characterize which data is reused versus recomputed for each lookup.

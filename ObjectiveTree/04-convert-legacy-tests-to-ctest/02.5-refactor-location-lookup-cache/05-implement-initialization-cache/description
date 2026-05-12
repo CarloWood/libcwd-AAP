@@ -1,0 +1,1 @@
+Implement the initialization-time object, symbol, and source-location cache so address lookups reuse precomputed data, handle loaded objects consistently, and avoid repeating expensive libdw traversal for every location query.

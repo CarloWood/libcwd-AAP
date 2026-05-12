@@ -1,0 +1,1 @@
+Make location_ct and related location lookup callers use the new cache-backed implementation, then verify legacy location scenarios including lines, line directives, inlined/default-argument call sites, and mangled-function-name lookup through deterministic CTest coverage.

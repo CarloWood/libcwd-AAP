@@ -1,0 +1,1 @@
+Document the current libcwd public and internal API for address-to-file:line lookup, including location_ct behavior, accepted address forms, rendering expectations, and callers that depend on mangled-name or inline-source resolution, so the refactor has an explicit compatibility target.
