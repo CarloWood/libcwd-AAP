@@ -1,0 +1,1 @@
+Establish whether the existing implementation and the new dwarf2 implementation can coexist while development proceeds, especially around interposing or wrapping dlopen and dlclose without breaking the current location lookup path.

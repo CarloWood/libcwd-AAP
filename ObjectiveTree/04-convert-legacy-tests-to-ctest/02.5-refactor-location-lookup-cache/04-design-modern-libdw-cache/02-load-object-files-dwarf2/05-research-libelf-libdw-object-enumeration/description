@@ -1,0 +1,1 @@
+Determine the current best-practice APIs for enumerating loaded ELF object files and obtaining each file path, load address, and end address, including whether libdw is needed or whether libelf, dl_iterate_phdr, and dynamic-loader APIs are sufficient.

@@ -1,0 +1,1 @@
+Determine whether the existing implementation handles dlclose events, what state is updated or left stale when shared objects unload, and what behavior the new ObjectFileBase cache needs for unloaded objects.

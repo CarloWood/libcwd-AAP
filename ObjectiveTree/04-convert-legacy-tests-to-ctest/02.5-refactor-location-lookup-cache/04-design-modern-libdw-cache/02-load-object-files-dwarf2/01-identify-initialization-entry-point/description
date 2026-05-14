@@ -1,0 +1,1 @@
+Identify the initialization entry point that should trigger discovery of loaded object files for ObjectFileBase::s_object_files_, including how that entry point relates to libcwd::initialize(), global construction, and debug-channel initialization.

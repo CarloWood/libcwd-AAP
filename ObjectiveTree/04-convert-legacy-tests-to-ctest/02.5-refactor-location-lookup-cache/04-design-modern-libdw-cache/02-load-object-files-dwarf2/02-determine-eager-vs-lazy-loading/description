@@ -1,0 +1,1 @@
+Determine whether the existing implementation loads object-file debug data eagerly at startup or lazily when an address lookup first needs a given object file, and record the observable behavior that the dwarf2 implementation must preserve or intentionally change.
