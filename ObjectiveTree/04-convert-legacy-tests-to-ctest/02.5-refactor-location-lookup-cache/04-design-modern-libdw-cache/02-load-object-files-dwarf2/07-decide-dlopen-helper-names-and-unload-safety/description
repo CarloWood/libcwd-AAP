@@ -1,0 +1,1 @@
+Decide whether dwarf2 needs an unload helper for dlclose and whether removing PT_LOAD segment entries is safe with retained ObjectFile lifetimes, then choose clear names for the targeted dlopen registration and dlclose unregistration helpers.

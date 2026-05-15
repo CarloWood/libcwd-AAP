@@ -1,0 +1,1 @@
+Determine how the old implementation locked the dlopen handle map, including whether it ever used read-only locking or always serialized map access with a write-style mutex.

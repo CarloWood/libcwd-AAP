@@ -1,0 +1,1 @@
+Ensure newly created immutable dwarf2 `ObjectFile` and `PTLoadSegment` records are safely published to readers, including any necessary memory ordering or synchronization guarantee after their final write.

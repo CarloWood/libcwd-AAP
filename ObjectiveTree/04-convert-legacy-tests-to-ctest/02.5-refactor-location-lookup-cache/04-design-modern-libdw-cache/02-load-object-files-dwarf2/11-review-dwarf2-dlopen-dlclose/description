@@ -1,0 +1,1 @@
+Review the dwarf2 dlopen and dlclose wrappers for correctness, naming, locking style, initialization ordering, diagnostic channel handling, duplicate registration behavior, and unload semantics before relying on them for address-range tracking.

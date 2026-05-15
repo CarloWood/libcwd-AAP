@@ -1,0 +1,1 @@
+Resolve the real dynamic-loader entry points for dwarf2 dlopen and dlclose interposition with `std::call_once`, avoiding unsynchronized lazy initialization of the RTLD_NEXT function pointers.

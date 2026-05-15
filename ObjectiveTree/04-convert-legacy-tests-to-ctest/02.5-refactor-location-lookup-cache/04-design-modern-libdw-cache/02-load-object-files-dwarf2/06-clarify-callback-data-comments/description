@@ -1,0 +1,1 @@
+Clarify the `CallBackData` comments for dwarf2 object discovery so `target_lbase_` and the returned object pointer describe their exact roles for full startup enumeration versus targeted dlopen-driven registration.
