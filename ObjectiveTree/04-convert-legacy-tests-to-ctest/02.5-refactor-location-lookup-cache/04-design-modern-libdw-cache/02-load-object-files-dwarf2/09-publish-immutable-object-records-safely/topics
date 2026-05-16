@@ -1,0 +1,5 @@
+1. Clarify how `target_lbase_` is known after `dlopen` - done
+2. Check whether `link_map` already contains the needed `dl_phdr_info` fields - answered
+3. Clarify updated `CallBackData` comments after moving `find_loaded` before iteration - answered
+4. Decide naming vocabulary for dwarf2 ObjectFile/range registration versus DSO loading - done
+5. Decide if immutable ObjectFile/PTLoadSegment publication needs extra memory ordering - in discussion
