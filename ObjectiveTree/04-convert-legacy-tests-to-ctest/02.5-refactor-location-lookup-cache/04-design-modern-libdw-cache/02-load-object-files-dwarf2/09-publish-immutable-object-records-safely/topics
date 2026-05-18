@@ -4,3 +4,4 @@
 4. Decide naming vocabulary for dwarf2 ObjectFile/range registration versus DSO loading - done
 5. Decide if immutable ObjectFile/PTLoadSegment publication needs extra memory ordering - done
 6. Audit old `dwarf.cc` dlopen map locking - answered
+7. Prevent debuginfod/libcurl during libcwd static initialization - to be done
