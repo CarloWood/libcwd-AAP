@@ -1,0 +1,1 @@
+No longer consider dwarf2::ObjectFile instances to be construct-once and then read-only; wrap dwarf2::ObjectFile instances using the project's threadsafe submodule abstractions.

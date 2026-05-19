@@ -1,0 +1,1 @@
+Wire location_ct to dwarf2 as far as looking up the ObjectFile for an address, returning an unknown function placeholder without resolving symbols or file:line information yet.

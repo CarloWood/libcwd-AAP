@@ -1,0 +1,1 @@
+Move the call to load_symbols() outside of the constructor and add a member bool to keep track of whether or not it was already called.

@@ -1,0 +1,1 @@
+Redesign delayed DSO registration while inside dwfl_module_getdwarf so ObjectFile instances are always created and added to the map, while any load_symbols() call remains delayed as usual; remove the Chain/inside_dwfl_module_getdwarf machinery if it is no longer needed.

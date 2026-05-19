@@ -1,0 +1,1 @@
+Implement delayed symbol loading, only done once per ObjectFile at the moment an address lookup is required and main was already reached.
