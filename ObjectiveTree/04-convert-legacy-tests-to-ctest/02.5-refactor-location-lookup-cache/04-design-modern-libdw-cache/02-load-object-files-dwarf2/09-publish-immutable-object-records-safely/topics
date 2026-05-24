@@ -1,2 +1,2 @@
-1. Prevent debuginfod/libcurl during libcwd static initialization - to be done
-2. Decide whether exposing dwarf2 address-to-object lookup is acceptable for wiring `location_ct` - needs discussion
+1. Build delayed address-to-function symbol map from libdw data - current focus
+2. Add inline-aware address-to-source-location lookup later - to be done
