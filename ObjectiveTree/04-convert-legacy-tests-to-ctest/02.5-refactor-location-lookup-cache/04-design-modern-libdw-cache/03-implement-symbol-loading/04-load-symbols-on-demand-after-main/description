@@ -1,1 +1,1 @@
-Only call load_symbols() when an address lookup is required for a given ObjectFile, it has not been called for that ObjectFile before, and main was already reached.
+Only call realize_symbols() when an address lookup is required for a given ObjectFile, it has not been called for that ObjectFile before, and main was already reached.
