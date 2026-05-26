@@ -1,0 +1,1 @@
+Add regex-aware expected-output matching for CTest helpers so `libcwd_ctest::matches_expected_output` treats expected strings ending in `$` as regular expressions. Update `location_from_global_object.cc` so the first `expected_debug` string is a raw string matching `...C[12]Ev$` instead of only `...C1Ev`. Verify the change by running `aap-build` only, not `aap-test`.
