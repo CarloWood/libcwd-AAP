@@ -1,2 +1,2 @@
-1. Build delayed address-to-function symbol map from libdw data - current focus
-2. Add inline-aware address-to-source-location lookup later - to be done
+1. Build delayed address-to-function symbol map from libdw data - done / may refine
+2. Add inline-aware address-to-source-location lookup - current focus
