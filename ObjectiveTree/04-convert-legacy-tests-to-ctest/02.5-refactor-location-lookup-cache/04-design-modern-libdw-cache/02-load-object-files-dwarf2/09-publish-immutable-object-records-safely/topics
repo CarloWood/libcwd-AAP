@@ -1,3 +1,2 @@
-1. Build delayed address-to-function symbol map from libdw data - done / may refine
+1. Investigate finding the (mangled) name of a function (by address) before libdw can be used because we're still initialization global objects.
 2. Add inline-aware address-to-source-location lookup - current focus
-3. Add support for regular expressions to `libcwd_ctest::matches_expected_output`, probably via new `libcwd_ctest::regex_matches_expected_output` - to be done
