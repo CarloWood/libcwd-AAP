@@ -1,2 +1,2 @@
-1. Investigate finding the (mangled) name of a function (by address) before libdw can be used because we're still initialization global objects.
-2. Add inline-aware address-to-source-location lookup - current focus
+1. Investigate finding the (mangled) name of a function (by address) before libdw can be used because we're still initializing global objects - current focus
+2. Add inline-aware address-to-source-location lookup - to be done

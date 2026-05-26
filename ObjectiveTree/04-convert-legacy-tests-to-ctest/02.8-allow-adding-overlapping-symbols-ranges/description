@@ -1,0 +1,10 @@
+Fix how new SymbolRange's are inserted into function_symbols_ at the end of `ObjectFileData::add_function_symbol_range`:
+Let the new range that needs to be added be [start_addr, end_addr).
+1. Find all existing ranges in function_symbols_ overlapping with [start_addr, end_addr).
+2. For each overlapping subrange (entirely belonging to the new range, and to one existing range):
+  - decide winner using:
+    - DWARF beats ELF (use `SymbolRange::is_elf_symbol()` for existing ranges and whether or not `func_die` is non-null for the new range).
+    - same kind: smaller size wins (use `SymbolRange::size()` for existing ranges and `end_pc - start_pc` for the new range).
+  - if new wins, erase/snip the existing range into left/right leftovers.
+  - if existing wins, remove that overlapping subrange from the pending new range pieces.
+3. Insert whatever pieces of the new range remain.
