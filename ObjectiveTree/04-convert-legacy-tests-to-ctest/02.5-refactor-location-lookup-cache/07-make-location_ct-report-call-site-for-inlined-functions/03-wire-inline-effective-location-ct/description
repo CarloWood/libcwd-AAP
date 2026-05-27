@@ -1,0 +1,1 @@
+Wire the inline-effective DWARF lookup result into `location_ct` so addresses in inlined function bodies report the inlined function name and original source location while preserving current fallback behavior for non-inline and no-debug cases.

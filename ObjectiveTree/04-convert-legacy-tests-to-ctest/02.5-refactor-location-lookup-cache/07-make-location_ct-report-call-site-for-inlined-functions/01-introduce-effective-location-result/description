@@ -1,0 +1,1 @@
+Introduce an internal lookup result representation so DWARF address lookup can carry an effective function name, filepath, line number, and success state without changing observable `location_ct` behavior yet.

@@ -1,0 +1,1 @@
+Add an inline-aware DWARF scope inspection helper that uses `dwarf_getscopes` to detect the innermost `DW_TAG_inlined_subroutine`, resolves its original function name through integrated attributes, and keeps the behavior documented and inspectable.

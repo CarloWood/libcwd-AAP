@@ -1,0 +1,1 @@
+Build and run the relevant location tests, especially `location_inlined_calls`, then reassess whether the compiled test binary provides sufficient inline DWARF metadata before making any test or compiler-flag assumptions.
