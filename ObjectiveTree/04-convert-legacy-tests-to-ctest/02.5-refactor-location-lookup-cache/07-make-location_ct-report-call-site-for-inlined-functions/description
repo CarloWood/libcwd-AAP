@@ -1,1 +1,7 @@
-Make `location_ct` report inlined function bodies as their original source locations. When an address range belongs to an inlined function, constructing `location_ct` for an address in that range must behave as if it were created for the original function body: the reported mangled function name must be the inlined function's name, and the filename and line number must point to that function's source definition. The existing CTest `location_inlined_calls` should pass without modifying that test.
+Report inline source scopes in location_ct
+
+Introduce a location lookup result that distinguishes the enclosing physical
+symbol from the effective source-level function. Use DWARF inline-scope metadata
+to report DW_TAG_inlined_subroutine bodies with the inlined function name, and
+add CTest coverage documenting both real inline-body handling and
+default-argument call-site metadata limitations.

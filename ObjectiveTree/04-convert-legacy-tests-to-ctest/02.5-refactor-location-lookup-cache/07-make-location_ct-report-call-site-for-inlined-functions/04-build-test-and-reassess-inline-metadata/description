@@ -1,1 +1,3 @@
-Build and run the relevant location tests, especially `location_inlined_calls`, then reassess whether the compiled test binary provides sufficient inline DWARF metadata before making any test or compiler-flag assumptions.
+Build/test and inspect
+   - Run location_default_argument_functions.
+Investigate why the exact call locations of arg_g1 and arg_g2 are reported wrongly by eu-addr2line as well as our own code.
