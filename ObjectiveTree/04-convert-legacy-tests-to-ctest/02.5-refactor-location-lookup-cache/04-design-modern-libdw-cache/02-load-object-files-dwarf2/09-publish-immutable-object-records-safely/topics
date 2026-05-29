@@ -1,5 +1,6 @@
 1. Investigate finding the (mangled) name of a function (by address) before libdw can be used because we're still initializing global objects - current focus
-2. Add inline-aware address-to-source-location lookup - implemented; final description/review in progress
+2. Add inline-aware address-to-source-location lookup - done
 3. Merge `dc::bfd` and `dc::dwarf` into `dc::elfutils` for ELF/DWARF/libdw/libelf diagnostics - to be done
 4. Adjust `location_loading_fixture` so deterministic lifecycle checks do not conflict with merged `dc::elfutils` diagnostics - to be done
 5. Consider using CTest output regex properties for debug-channel output tests - current discussion
+6. Rename `dwarf2` to `dwarf` before marking the location lookup cache refactor done - to be done
