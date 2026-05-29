@@ -1,0 +1,1 @@
+Port all remaining legacy testsuite tests to CTest-backed tests so the full maintained test coverage can be built, run, and verified through CTest without relying on manual or ad hoc test runners.

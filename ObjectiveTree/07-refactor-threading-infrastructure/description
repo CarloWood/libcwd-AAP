@@ -1,0 +1,1 @@
+Refactor libcwd threading internals around modern C++ and project-supported synchronization primitives. Remove obsolete threading macros and libpthread-specific locking assumptions where practical, prefer std::thread and threadsafe abstractions, and preserve existing public behavior while simplifying thread lifecycle, locking, and TSD handling.
