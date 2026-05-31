@@ -4,3 +4,6 @@
 4. Adjust `location_loading_fixture` so deterministic lifecycle checks do not conflict with merged `dc::elfutils` diagnostics - to be done
 5. Consider using CTest output regex properties for debug-channel output tests - current discussion
 6. Rename `dwarf2` to `dwarf` before marking the location lookup cache refactor done - to be done
+7. Explain `flush_cf`/`continued_cf` output ordering in `flush.cc` - answered
+8. Fix `ctest/flush.cc` so it tests real flush visibility rather than stringstream insertion order - to be done
+9. Add shared CTest buffered ostream support that exposes only flushed output and supports raw bypass writes - to be done
