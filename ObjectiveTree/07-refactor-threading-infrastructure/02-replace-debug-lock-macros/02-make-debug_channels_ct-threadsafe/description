@@ -1,0 +1,1 @@
+Replace libcwd::_private_::debug_channels_ct with something using `threadsafe::Unlocked` instead of the DEBUG_*_(ACQUIRE|RELEASE)_*_LOCK macros.

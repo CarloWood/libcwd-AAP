@@ -1,0 +1,1 @@
+Add one or more tests that test that libcwd behaves as expected when capturing debug output of multiple threads simultaneously.

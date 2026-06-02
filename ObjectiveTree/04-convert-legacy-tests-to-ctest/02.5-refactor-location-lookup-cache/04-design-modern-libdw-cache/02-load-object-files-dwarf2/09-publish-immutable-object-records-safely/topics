@@ -7,3 +7,4 @@
 7. Explain `flush_cf`/`continued_cf` output ordering in `flush.cc` - answered
 8. Fix `ctest/flush.cc` so it tests real flush visibility rather than stringstream insertion order - to be done
 9. Add shared CTest buffered ostream support that exposes only flushed output and supports raw bypass writes - to be done
+10. Design dedicated multi-threaded debug-output CTest - current discussion

@@ -1,0 +1,6 @@
+1. Design dedicated multi-threaded debug-output CTest - current discussion
+2. Cover multi-threaded flushing behavior - to be discussed
+3. Verify ostream mutex locking during virtual streambuf writes/syncs - done as far as possible
+4. Test interruption of `continued_cf` output between threads - current discussion
+5. Test per-thread isolation of markers and indentation - done
+6. Make `PendingStream` an instrumented locked sink with private `AIMutex` and install helper - done

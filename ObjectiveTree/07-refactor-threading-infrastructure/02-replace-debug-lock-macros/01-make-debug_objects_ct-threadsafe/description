@@ -1,0 +1,15 @@
+Replace libcwd::_private_::debug_objects_ct with something using `threadsafe::Unlocked` instead of the DEBUG_*_(ACQUIRE|RELEASE)_*_LOCK macros. It seems that replacing
+```
+ public:
+  typedef std::vector<debug_ct*> container_type;
+ private:
+  container_type* WNS_debug_objects;
+```
+with:
+```
+ public:
+  using container_t = threadsafe::Unlocked<std::vector<debug_ct*>, threadsafe::policy::ReadWrite<AIReadWriteMutex>>;
+ private:
+  container_t WNS_debug_objects;
+```
+might be a good start.

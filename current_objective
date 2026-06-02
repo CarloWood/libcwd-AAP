@@ -1,1 +1,1 @@
-ObjectiveTree/06-port-remaining-testsuite-tests-to-ctest
+ObjectiveTree/07-refactor-threading-infrastructure/02-replace-debug-lock-macros/03-remove-rwlock_tct
