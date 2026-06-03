@@ -1,0 +1,5 @@
+Remove obsolete deadlock-diagnostics infrastructure:
+- remove test_for_deadlock
+- remove keypair_map_t / keypair_map_instance
+- remove locked_by / locked_from tracking if only used by that diagnostic
+- simplify mutex_tct and mutex_ct debug paths accordingly
