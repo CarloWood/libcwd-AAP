@@ -1,0 +1,26 @@
+Convert old locking code for instance `libcwd::_private_::mutex_instance_nt threadlist_instance` to new locking code based on threadsafe.
+
+An example of code using the new locking code is how the `debug_channels_ct` instance works:
+- a public header declares the trivially constructable aggregate `debug_channels_ct` that wraps a pointer to a heap allocated `debug_channels_ct::impl_ct`
+  which is created and stored by the static `debug_channels_ct::instance()` method. The use of this `instance()` function makes sure that it is constructed
+  upon first use, and the use of a pointer to an incomplete `impl_ct` allows us to separate the `threadsafe` implementation from the public API of libcwd
+  (threadsafe.h is not included in a public header).
+- The `impl_ct` contains a `threadsafe::Unlocked` type:
+```
+struct ChannelSets
+{
+  std::vector<channel_ct*> visible_;
+  std::vector<channel_ct*> hidden_;
+  int next_index_{};
+};
+
+struct debug_channels_ct::impl_ct  
+{
+  using channel_sets_ts = threadsafe::Unlocked<ChannelSets, threadsafe::policy::ReadWrite<AIReadWriteMutex>>;
+  channel_sets_ts channel_sets_;      
+};
+```
+- Getting access to the `ChannelSets` instance can then be done through the (usual) wat, rat, crat access types of `threadsafe`,
+  e.g. `impl_ct::channel_sets_ts::crat channel_sets_r(M_impl->channel_sets_);` etc.
+- Note the trick with the incomplete type `ChannelSetsWat` in the public header class_channel.h, allowing us to pass an access type
+  to a member function of the public `channel_ct` without including threadsafe.h in its public header.

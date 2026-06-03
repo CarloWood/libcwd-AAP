@@ -1,0 +1,1 @@
+Replace set_ostream_instance locking with typed synchronization around debug_ct output destination state so real_os and M_mutex updates, reads, and stream-mutex lifetime handoff in buffer_ct::writeto remain race-free and cancellation-safe.

@@ -1,0 +1,1 @@
+Replace the remaining libcwd::_private_::mutex_tct infrastructure with threadsafe implementation. Remove obsolete mutex_tct initialization and mutex-instance entries when no longer used, and preserve cancellation-safety and debug/deadlock diagnostics or replace them with equivalent checks.

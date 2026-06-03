@@ -1,0 +1,1 @@
+Replace static_tsd_instance locking with a threadsafe-protected static TSD registry that serializes allocation, lookup, release, and termination bookkeeping for the temporary TSD array while preserving early-initialization behavior and cancellation safety.

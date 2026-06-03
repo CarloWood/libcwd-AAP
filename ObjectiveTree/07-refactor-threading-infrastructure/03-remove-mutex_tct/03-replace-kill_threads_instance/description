@@ -1,0 +1,1 @@
+Replace kill_threads_instance with an equivalent threadsafe or atomic one-shot fatal/core-dump ownership gate so only the first fatal path cancels peer threads or raises the core dump while later contenders take the existing cancellation-exit path.

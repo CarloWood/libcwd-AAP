@@ -1,0 +1,1 @@
+Replace keypair_map_instance locking with a threadsafe-protected deadlock-diagnostics key-pair registry so test_lock_pair serializes lazy allocation and updates to keypair_info_st state, history, and limit counters without relying on mutex_tct.
