@@ -1,3 +1,1 @@
-1. Investigate remaining `mutex_tct` instances and protected data - done
-2. Remove public `debug_ct::set_ostream(std::ostream*, pthread_mutex_t*)` overload for v2 - to be done
-3. Remove obsolete deadlock-diagnostics infrastructure instead of preserving partial `keypair_map_instance` coverage - decided
+1. all done
