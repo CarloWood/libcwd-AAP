@@ -1,1 +1,2 @@
 1. all done
+2. Assess whether libcwd pthread TSD can be replaced by portable C++20 - answered
