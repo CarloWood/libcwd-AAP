@@ -1,2 +1,2 @@
-1. all done
-2. Assess whether libcwd pthread TSD can be replaced by portable C++20 - answered
+1. Delete obsolete ThreadList/thread_ct/TSD thread-id state - done
+2. Clean remaining minor threading leftovers - to be done
