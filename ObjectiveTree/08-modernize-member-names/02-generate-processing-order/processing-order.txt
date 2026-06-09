@@ -1,0 +1,72 @@
+# Processing order for member-name modernization
+
+Source inventory: ../01-inventory-member-names/member_name_overview.md
+
+This order is restricted to the approved class/struct list from the type-name refactor and from the member-name overview.
+Each item is one edit unit. For duplicate names, the definition path disambiguates the type.
+
+Test definition file-kind check:
+- Grep of `tests/` class/struct definitions found only `.cc` and `.h` definition files.
+- No `.inl`, `.cpp`, `.cxx`, `.C`, or other test file kinds define classes/structs.
+- The processing order below includes only the approved-list test types from the overview, not unrelated test-local types outside that list.
+
+Format:
+  <number>. <Type> | <kind> | <definition-file>:<line> | overview-key=<markdown heading key>
+
+## 1. Types defined in `.cc` files under `tests/`
+
+001. ParsedLine | struct | tests/colors_debug_output.cc:27 | overview-key=ParsedLine (tests/colors_debug_output.cc)
+002. RedirectCerrToStringStream | class | tests/continued.cc:41 | overview-key=RedirectCerrToStringStream
+003. RedirectStream | class | tests/do.cc:34 | overview-key=RedirectStream
+004. RedirectCout | class | tests/location_from_global_object.cc:21 | overview-key=RedirectCout
+005. location_libtest1_LifeCycle | class | tests/support/location_libtest1.cc:35 | overview-key=location_libtest1_LifeCycle
+006. location_libtest2_LifeCycle | class | tests/support/location_libtest2.cc:10 | overview-key=location_libtest2_LifeCycle
+007. location_plugin1_LifeCycle | class | tests/support/location_plugin1.cc:11 | overview-key=location_plugin1_LifeCycle
+008. location_plugin2_LifeCycle | class | tests/support/location_plugin2.cc:9 | overview-key=location_plugin2_LifeCycle
+009. ParsedLine | struct | tests/threaded_debug_output.cc:119 | overview-key=ParsedLine (tests/threaded_debug_output.cc)
+
+## 2. Types defined in `.h` files under `tests/`
+
+010. CaptureState | struct | tests/support/location_loading_support.h:17 | overview-key=CaptureState
+011. RedirectCerr | class | tests/support/test_support.h:54 | overview-key=RedirectCerr
+
+## 3. Types defined in non-test `.cc` files
+
+012. Buffer | class | src/debug.cc:38 | overview-key=Buffer
+013. DebugChannels::Impl | struct | src/debug.cc:436 | overview-key=DebugChannels::Impl
+014. DebugObjects::Impl | struct | src/debug.cc:590 | overview-key=DebugObjects::Impl
+015. OutputState | class | src/debug.cc:642 | overview-key=OutputState
+016. Argv | class | utils/exec_prog.cc:26 | overview-key=Argv
+017. PrintablePollDummy | class | utils/exec_prog.cc:36 | overview-key=PrintablePollDummy
+
+## 4. Types defined in `.h`/`.inl` files outside `include/libcwd`
+
+018. Substitution | struct | include/cwd_demangle.h:46 | overview-key=Substitution
+019. Entry | struct | include/cwd_demangle.h:1073 | overview-key=Entry
+020. Environment | class | include/environment.h:15 | overview-key=Environment
+
+## 5. Remaining types, defined in `include/libcwd` headers
+
+021. AlwaysChannel | class | include/libcwd/class_always_channel.h:25 | overview-key=AlwaysChannel
+022. Channel | class | include/libcwd/class_channel.h:72 | overview-key=Channel
+023. ChannelSetData | struct | include/libcwd/class_channel_set.h:30 | overview-key=ChannelSetData
+024. ChannelSetBootstrap | struct | include/libcwd/class_channel_set.h:72 | overview-key=ChannelSetBootstrap
+025. FatalChannelSetBootstrap | struct | include/libcwd/class_channel_set.h:86 | overview-key=FatalChannelSetBootstrap
+026. ChannelSet | struct | include/libcwd/class_channel_set.h:105 | overview-key=ChannelSet
+027. ContinuedChannelSet | struct | include/libcwd/class_channel_set.h:120 | overview-key=ContinuedChannelSet
+028. ContinuedChannel | class | include/libcwd/class_continued_channel.h:26 | overview-key=ContinuedChannel
+029. OstreamState | struct | include/libcwd/class_debug.h:31 | overview-key=OstreamState
+030. DebugObject | class | include/libcwd/class_debug.h:104 | overview-key=DebugObject
+031. DebugString | class | include/libcwd/class_debug_string.h:32 | overview-key=DebugString
+032. DebugStringStackElement | struct | include/libcwd/class_debug_string.h:72 | overview-key=DebugStringStackElement
+033. FatalChannel | class | include/libcwd/class_fatal_channel.h:29 | overview-key=FatalChannel
+034. Location | class | include/libcwd/class_location.h:56 | overview-key=Location
+035. RcFile | class | include/libcwd/class_rcfile.h:31 | overview-key=RcFile
+036. DebugChannels | struct | include/libcwd/macro_ForAllDebugChannels.h:29 | overview-key=DebugChannels
+037. DebugObjects | struct | include/libcwd/macro_ForAllDebugObjects.h:27 | overview-key=DebugObjects
+038. BufferStream | class | include/libcwd/private_bufferstream.h:19 | overview-key=BufferStream
+039. LockInterfaceBase | class | include/libcwd/private_lock_interface.h:15 | overview-key=LockInterfaceBase
+040. ThreadSpecificData | struct | include/libcwd/private_struct_TSD.h:76 | overview-key=ThreadSpecificData
+041. RefCountedCharPtr | class | include/libcwd/smart_ptr.h:17 | overview-key=RefCountedCharPtr
+042. DebugObject_ThreadSpecificData | struct | include/libcwd/struct_debug_tsd.h:35 | overview-key=DebugObject_ThreadSpecificData
+043. TypeInfo | class | include/libcwd/type_info.h:51 | overview-key=TypeInfo
