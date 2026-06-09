@@ -1,2 +1,3 @@
 1. Delete obsolete ThreadList/thread_ct/TSD thread-id state - done
 2. Clean remaining minor threading leftovers - to be done
+3. Decide how to translate NS_/WNS_ semantic prefixes during member renaming - to be done

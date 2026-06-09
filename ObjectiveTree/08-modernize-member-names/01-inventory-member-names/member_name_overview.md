@@ -254,7 +254,7 @@ No member variables found in the definition file.
 | `private` | `M_size` | `size_` | 37 | rename |
 | `private` | `M_capacity` | `capacity_` | 38 | rename |
 | `private` | `M_default_capacity` | `default_capacity_` | 39 | rename |
-| `private` | `min_capacity_c` | `min_capacity_c_` | 40 | rename; static |
+| `private` | `min_capacity_c` | `min_capacity` | 40 | rename; static |
 
 ### `DebugStringStackElement`
 
@@ -347,8 +347,8 @@ No member variables found in the definition file.
 
 | Access | Current | Suggested | Line | Notes |
 |---|---|---|---:|---|
-| `protected` | `M_object_file` | `object_file_` | 58 | rename |
-| `protected` | `M_func` | `func_` | 59 | rename |
+| `protected` | `M_object_file` | `object_file_name_` | 58 | rename |
+| `protected` | `M_func` | `function_name_` | 59 | rename |
 | `protected` | `M_filepath` | `filepath_` | 60 | rename |
 | `protected` | `M_filename` | `filename_` | 62 | rename; anonymous union member not emitted by ctags |
 | `protected` | `M_initialization_delayed` | `initialization_delayed_` | 63 | rename; anonymous union member not emitted by ctags |
@@ -356,7 +356,6 @@ No member variables found in the definition file.
 | `protected` | `M_line` | `line_` | 66 | rename |
 | `protected` | `M_known` | `known_` | 67 | rename |
 | `protected` | `S_uninitialized_location_ct_c` | `uninitialized_location_ct_c_` | 73 | rename; static |
-| `protected` | `S_pre_ios_initialization_c` | `pre_ios_initialization_c_` | 74 | rename; static |
 | `protected` | `S_pre_libcwd_initialization_c` | `pre_libcwd_initialization_c_` | 75 | rename; static |
 | `protected` | `S_cleared_location_ct_c` | `cleared_location_ct_c_` | 76 | rename; static |
 
@@ -557,7 +556,7 @@ No member variables found in the definition file.
 | Access | Current | Suggested | Line | Notes |
 |---|---|---|---:|---|
 | `protected` | `M_type_size` | `type_size_` | 53 | rename |
-| `protected` | `M_type_ref_size` | `type_ref_size_` | 54 | rename |
+| `protected` | `M_type_ref_size` | `dereferenced_type_size_` | 54 | rename |
 | `protected` | `M_name` | `name_` | 55 | rename |
-| `protected` | `M_dem_name` | `dem_name_` | 56 | rename |
+| `protected` | `M_dem_name` | `demangled_name_` | 56 | rename |
 
