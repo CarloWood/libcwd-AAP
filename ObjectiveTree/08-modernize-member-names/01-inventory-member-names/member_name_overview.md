@@ -155,7 +155,7 @@ No member variables found in the definition file.
 | `public` | `label` | `label` | 32 | same |
 | `public` | `mask` | `mask` | 35 | same |
 | `public` | `on` | `on` | 38 | same |
-| `public` | `do_tsd_ptr` | `do_tsd_ptr` | 41 | same |
+| `public` | `do_tsd_ptr` | `debug_object_tsd_ptr` | 41 | same |
 
 ### `ChannelSet`
 
@@ -542,8 +542,8 @@ No member variables found in the definition file.
 | `public` | `lock_interface_is_locked` | `lock_interface_is_locked` | 81 | same |
 | `public` | `recursive_fatal` | `recursive_fatal` | 82 | same |
 | `public` | `recursive_assert` | `recursive_assert` | 84 | same |
-| `public` | `do_off_array` | `do_off_array` | 86 | same |
-| `public` | `do_array` | `do_array` | 87 | same |
+| `public` | `do_off_array` | `debug_object_off_array` | 86 | same |
+| `public` | `do_array` | `debug_object_array` | 87 | same |
 | `public` | `off_cnt_array` | `off_cnt_array` | 94 | same |
 | `private` | `initialized` | `initialized_` | 102 | rename |
 | `private` | `cleaning_up` | `cleaning_up_` | 103 | rename |
