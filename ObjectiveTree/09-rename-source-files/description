@@ -1,0 +1,1 @@
+Rename source files to follow a consistent, documented naming scheme while preserving build behavior, install layout compatibility where applicable, and test coverage.
