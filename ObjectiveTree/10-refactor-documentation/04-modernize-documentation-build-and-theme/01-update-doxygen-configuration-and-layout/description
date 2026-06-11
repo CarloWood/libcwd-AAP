@@ -1,0 +1,1 @@
+Update the Doxygen configuration and layout so the reference manual exposes useful navigation, project metadata, search if appropriate, a controlled page/sidebar structure, and clean integration points for custom styles and scripts without relying on fragile post-processing.

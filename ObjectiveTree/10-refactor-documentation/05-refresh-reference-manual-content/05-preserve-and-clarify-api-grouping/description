@@ -1,0 +1,1 @@
+Preserve Doxygen grouping for public libcwd APIs while renaming, reorganizing, or cross-linking groups where needed so grouped pages remain discoverable from the reference manual chapters and no documented public API is orphaned.

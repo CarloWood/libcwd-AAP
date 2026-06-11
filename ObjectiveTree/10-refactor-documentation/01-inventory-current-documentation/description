@@ -1,0 +1,1 @@
+Establish an accurate baseline of the existing documentation sources and generated outputs, including doc/*.dox pages, Doxygen groups, static HTML/CSS/JS assets, m4/awk tutorial generation, tutorial example output generation, CMake doc targets, current warnings, and known stale content so later changes can be checked against preserved behavior.

@@ -1,0 +1,1 @@
+Refresh the reference manual content so it matches the current libcwd API, build system, threading assumptions, file names, configuration options, and supported runtime features while preserving Doxygen API documentation and group-based organization.

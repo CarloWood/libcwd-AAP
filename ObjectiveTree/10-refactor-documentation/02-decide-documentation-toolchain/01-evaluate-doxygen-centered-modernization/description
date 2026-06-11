@@ -1,0 +1,1 @@
+Determine whether the existing Doxygen pipeline can deliver the desired documentation experience by using current Doxygen features such as layout.xml, HTML_COLORSTYLE=TOGGLE, HTML_EXTRA_STYLESHEET, search/treeview/sidebar options, and possibly a maintained Doxygen theme without changing the documentation content model.

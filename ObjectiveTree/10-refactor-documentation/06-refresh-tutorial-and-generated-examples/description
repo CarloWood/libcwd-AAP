@@ -1,0 +1,1 @@
+Refresh the tutorial text and generated example pipeline while keeping the six tutorial chapters, compiling the example programs used by the documentation, and constructing documented output from the actual debug output produced by those programs.

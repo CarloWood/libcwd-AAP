@@ -1,0 +1,1 @@
+Design the reference manual table of contents with coherent chapters for getting started/configuration, writing debug output, DWARF/ELF symbol and type introspection, and miscellaneous runtime support, using improved chapter names while preserving existing API group relationships.

@@ -1,0 +1,1 @@
+Update miscellaneous runtime documentation for rcfile handling, attach-gdb behavior, core dump support, gdb integration, and related runtime features so examples, option names, and caveats reflect the current library.

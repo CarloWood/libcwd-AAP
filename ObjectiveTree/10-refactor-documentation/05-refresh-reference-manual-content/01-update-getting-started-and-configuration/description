@@ -1,0 +1,1 @@
+Update the installation, configuration, environment, and getting-started documentation for the current CMake-based project state, current options, required threaded library behavior, generated headers, example project usage, and removal of obsolete autotools-era guidance.

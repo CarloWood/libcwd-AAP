@@ -1,0 +1,1 @@
+Add documentation verification that builds the full documentation output, fails on important Doxygen or generation errors, verifies tutorial example generation, and checks enough internal links/assets to prevent navigation regressions during future changes.

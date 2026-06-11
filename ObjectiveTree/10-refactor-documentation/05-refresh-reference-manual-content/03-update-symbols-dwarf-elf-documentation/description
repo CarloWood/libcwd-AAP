@@ -1,0 +1,1 @@
+Rename and refresh the current symbol-related chapter so it clearly covers DWARF/ELF support, elfutils integration, address-to-location lookup, symbol interpretation, demangling, and type information using terminology that matches the current implementation.

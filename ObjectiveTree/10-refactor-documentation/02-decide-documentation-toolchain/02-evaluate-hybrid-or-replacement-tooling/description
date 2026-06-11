@@ -1,0 +1,1 @@
+Determine whether adding or replacing tooling with a static site generator, Sphinx with Breathe/Exhale, or another wrapper would provide enough improvement to justify migrating or bridging existing .dox pages, Doxygen groups, and tutorial example generation.

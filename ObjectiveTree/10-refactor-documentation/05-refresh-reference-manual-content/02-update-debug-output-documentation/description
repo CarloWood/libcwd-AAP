@@ -1,0 +1,1 @@
+Update the writing-debug-output documentation for current debug channels, debug objects, destinations, formatting, control flags, custom debug hooks, fatal output, nesting, and special output behavior, preserving Doxygen groups where they remain the right API containers.
