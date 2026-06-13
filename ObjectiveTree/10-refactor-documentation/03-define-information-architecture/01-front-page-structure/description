@@ -1,1 +1,10 @@
-Design the front page as the main landing page and perform only the minimal Doxygen Awesome bootstrap needed for that page and its shared offline assets, while leaving the existing tutorial, reference manual, quick reference, and generated documentation structure otherwise unchanged for now. The front page must present a current libcwd overview, dated release news, and a clear table of contents linking to the tutorial, reference manual, quick reference, GitHub repository, and downloads. Use the prior plan artifacts indexed by `$PLANROOT/ObjectiveTree/10-refactor-documentation/01-inventory-current-documentation/contents`, `$PLANROOT/ObjectiveTree/10-refactor-documentation/02-decide-documentation-toolchain/01-evaluate-doxygen-centered-modernization/contents`, and `$PLANROOT/ObjectiveTree/10-refactor-documentation/02-decide-documentation-toolchain/02-evaluate-hybrid-or-replacement-tooling/contents`, especially the rule that user-facing English/news content is preserved while HTML layout, link destinations, and theme structure may change for Doxygen Awesome.
+Establish the reusable Doxygen Awesome site foundation while converting the landing content to Doxygen-rendered Markdown. Vendor and use the real Doxygen Awesome CSS/JS assets and Doxygen header/footer/layout mechanisms for the sidebar, theme toggle, page table of contents, and generated HTML; do not create custom renderers or temporary visual approximations that will be discarded. The initial generated pages must include About libcwd and release notes, preserve the existing user-facing overview/news text, and link to the still-legacy tutorial, reference manual, quick reference, GitHub repository, and downloads until later goals migrate those sections into the same shared shell.
+
+Interpret this as:
+
+- Replace the handcrafted doxygen-awesome.css bootstrap with real vendored Doxygen Awesome assets.
+- Use upstream darkmode JS/CSS, not local reimplementations.
+- Build header/footer/layout pieces intended to be shared later by reference manual and tutorial.
+- Doxygen-render about-libcwd.md and release-notes.md.
+- Do not spend effort polishing custom CSS that will be thrown away.
+- It is OK that tutorial/reference/quick-reference are only linked for now, as long as the foundation they will later move into is final.
