@@ -1,0 +1,13 @@
+<map id="Configuration Options And Macros" name="Configuration Options And Macros">
+<area shape="rect" id="Node000002" href="$group__book__start.html" title=" " alt="" coords="5,291,195,335"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="243,291,405,335"/>
+<area shape="rect" id="Node000003" href="$group__enable__alloc.html" title=" " alt="" coords="506,5,659,50"/>
+<area shape="rect" id="Node000008" href="$group__enable__debug.html" title=" " alt="" coords="504,75,662,119"/>
+<area shape="rect" id="Node000009" href="$group__enable__debug__output.html" title=" " alt="" coords="453,144,712,189"/>
+<area shape="rect" id="Node000010" href="$group__enable__debugm.html" title=" " alt="" coords="498,213,668,258"/>
+<area shape="rect" id="Node000005" href="$group__enable__glibcxx__debug.html" title=" " alt="" coords="478,282,688,344"/>
+<area shape="rect" id="Node000007" href="$group__enable__libbfd.html" title=" " alt="" coords="504,368,662,413"/>
+<area shape="rect" id="Node000006" href="$group__enable__location.html" title=" " alt="" coords="494,437,671,482"/>
+<area shape="rect" id="Node000004" href="$group__enable__magic.html" title=" " alt="" coords="505,507,660,551"/>
+<area shape="rect" id="Node000011" href="$group__enable__marker.html" title=" " alt="" coords="499,576,666,621"/>
+</map>
