@@ -1,0 +1,134 @@
+Determine the Directed A-cyclic Graph of child->parent relationships between these pages.
+
+Each TAG (and thus input/output file, since those are all 1-on-1 related) in
+$PLANROOT/ObjectiveTree/10-refactor-documentation/03-define-information-architecture/02-reference-manual-chapter-map/01-define-the-group-and-page-structure/01-establish-legacy-group-and-page-structure/legacy-overview.md
+is associtated with exactly one parent, accept the root node this graph, which is `mainpage`.
+
+Find what that parent is for all other files.
+That parent should have at least one link to the child.
+
+Those links are almost certainly `\ref TAG`. In fact, I could find the following:
+
+```
+\ref book_allocations_intro
+\ref book_writing
+\ref chapter_alloc_locations
+\ref chapter_attach_gdb
+\ref chapter_core_dump
+\ref chapter_custom_debug_h
+\ref chapter_custom_do
+\ref chapter_environment
+\ref chapter_gdb
+\ref chapter_magic_numbers
+\ref chapter_nesting
+\ref chapter_rcfile
+\ref chapter_symbols_intro
+\ref chapter_validation
+\ref group_control_flags
+\ref group_debug_channels
+\ref group_debug_object
+\ref group_destination
+\ref group_fatal_output
+\ref group_finding
+\ref group_formatting
+\ref group_invisible
+\ref group_locations
+\ref group_markers
+\ref group_overview
+\ref group_special
+\ref group_type_info
+\ref page_why_macro
+\ref preparation
+```
+
+And the following tags are not refered to by a /ref:
+
+```
+book_allocations        modules.dox             group__book__allocations.html
+book_runtime            modules.dox             group__book__runtime.html
+book_start              modules.dox             group__book__start.html
+book_symbols            modules.dox             group__book__symbols.html
+book_writing_intro      modules.dox             group__book__writing.html
+downloading             downloading.dox         downloading.html
+group_alloc_format      alloc_format.dox        group__group__alloc__format.html
+group_function          function.dox            group__group__function.html
+```
+
+The first five are groups defined by modules.dox (by containing an \addtogroup) and seems to be not link
+to from any "parent" page, although they are linked back to from their child pages.
+
+But `alloc_format.dox` contains:
+```
+\addtogroup group_alloc_format Format Of The Overview Of Allocated Memory
+\ingroup group_overview
+```
+Where the \addtogroup again is responsible for creating the page (group__group__alloc__format.html)
+and the \ingroup creates a parent-child relationship where group_overview is the parent of group_alloc_format.
+
+And, I can find the following \ingroup directives:
+```
+\ingroup book_allocations
+\ingroup book_allocations_intro
+\ingroup book_start
+\ingroup book_symbols
+\ingroup book_writing
+\ingroup chapter_alloc_locations
+\ingroup chapter_attach_gdb
+\ingroup chapter_core_dump
+\ingroup chapter_custom_debug_h
+\ingroup chapter_custom_do
+\ingroup chapter_environment
+\ingroup chapter_gdb
+\ingroup chapter_magic_numbers
+\ingroup chapter_nesting
+\ingroup chapter_rcfile
+\ingroup chapter_symbols_intro
+\ingroup chapter_validation
+\ingroup group_alloc_format
+\ingroup group_control_flags
+\ingroup group_debug_channels
+\ingroup group_debug_object
+\ingroup group_destination
+\ingroup group_fatal_output
+\ingroup group_finding
+\ingroup group_formatting
+\ingroup group_function
+\ingroup group_invisible
+\ingroup group_locations
+\ingroup group_markers
+\ingroup group_overview
+\ingroup group_special
+\ingroup group_type_info
+```
+
+Not all of those define a parent-child relationship however; for example core_dump.dox
+contains:
+```
+/*!
+\defgroup chapter_core_dump Making The Program Dump Core
+*/
+/*!
+\page page_core_dump
+\ingroup chapter_core_dump
+*/
+```
+and it seems that the \page isn't doing anything, whereas the \ingroup probably just puts `chapter_core_dump` (the current group) in itself.
+At most I'd expect a relationship where chapter_core_dump is the parent of page_core_dump - but well, the latter doesn't exist.
+
+Put the resulting graph in $PLANROOT/current_objective/ in an appropriate form.
+If the result is in indeed a pure tree, then I'd prefer it to be listed as a navigation tree, i.e.
+```
+mainpage
+  book_writing_intro
+  group_destination
+  group_debug_object
+    chapter_custom_do
+  group_debug_channels
+    group_default_dc
+  group_control_flags
+  group_formatting
+...
+  group_overview
+    group_invisible
+...
+```
