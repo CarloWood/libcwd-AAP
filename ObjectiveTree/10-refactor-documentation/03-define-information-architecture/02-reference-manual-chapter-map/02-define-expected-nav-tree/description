@@ -1,1 +1,47 @@
 For the pages/tags found in /10/03/02/01-define-the-group-and-page-structure, create a DAG in the form of a nav tree in the way as was done for the legacy web pages.
+
+The result of /10/03/02/01-define-the-group-and-page-structure can be found at
+$PLANROOT/ObjectiveTree/10-refactor-documentation/03-define-information-architecture/02-reference-manual-chapter-map/01-define-the-group-and-page-structure/overview.md
+
+Those tags need to be written as a "nav tree" like was done for the legacy web pages at the bottom
+of $PLANROOT/ObjectiveTree/10-refactor-documentation/03-define-information-architecture/02-reference-manual-chapter-map/01-define-the-group-and-page-structure/02-establish-legacy-hierachy/legacy-hierarchy.md
+
+Using that to put the given tags in a tree in the same way I get:
+```
+reference-manual
+  reference-manual-writing-debug-output
+    book_writing_intro
+      page_why_macro
+    group_destination
+    group_debug_object
+      chapter_custom_do
+    group_debug_channels
+      group_default_dc
+    group_control_flags
+    group_formatting
+    group_fatal_output
+    chapter_nesting
+    group_special
+  reference-manual-symbols
+    chapter_symbols_intro
+    group_locations
+    group_type_info
+      group_demangle
+  reference-manual-getting-started
+    downloading
+    preparation
+    chapter_custom_debug_h
+    group_configuration
+    chapter_environment
+  reference-manual-runtime
+    chapter_rcfile
+    chapter_attach_gdb
+    chapter_core_dump
+    chapter_gdb
+  group_function
+```
+where the following tags from overview.md could not be placed.
+```
+function_objects
+release-notes
+```
