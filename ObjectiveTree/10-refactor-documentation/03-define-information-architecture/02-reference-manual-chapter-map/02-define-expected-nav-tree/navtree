@@ -1,7 +1,13 @@
 reference-manual                                reference-manual.md:1                           Reference Manual
+  reference-manual-getting-started              reference-manual-getting-started.md:1           Configuration, Installation And Getting Started
+    downloading                                 downloading.md:1                                Downloading
+    preparation                                 preparation.md:1                                Preparation
+    chapter_custom_debug_h                      custom-debug.h.md:1                             The Custom debug.h File
+    group_configuration                         reference-groups.md:1                           Configuration Options And Macros
+    chapter_environment                         environment.md:1                                Environment Variables
   reference-manual-writing-debug-output         reference-manual-writing-debug-output.md:1      Writing Debug Output
     book_writing_intro                          writing_intro.md:1                              Writing Debug Output: Introduction
-      page_why_macro                            why_macro.md:1                                  Consideration Concerning Macros
+      page_why_macro                            why_macro.md:1                                  Design Consideration Concerning Macros
     group_destination                           destination.md:1                                Setting The Output Destination
     group_debug_object                          debug_object.md:1                               The Output Device (Debug Object)
       chapter_custom_do                         custom_do.md:1                                  Custom Debug Objects
@@ -17,12 +23,6 @@ reference-manual                                reference-manual.md:1           
     group_locations                             locations.md:1                                  Source-file:Line-number Information
     group_type_info                             type_info.md:1                                  Getting Type Information Of Types And Symbols
       group_demangle                            reference-groups.md:36                          demangle_type() and demangle_symbol()
-  reference-manual-getting-started              reference-manual-getting-started.md:1           Configuration, Installation And Getting Started
-    downloading                                 downloading.md:1                                Downloading
-    preparation                                 preparation.md:1                                Preparation
-    chapter_custom_debug_h                      custom-debug.h.md:1                             The Custom debug.h File
-    group_configuration                         reference-groups.md:1                           Configuration Options And Macros
-    chapter_environment                         environment.md:1                                Environment Variables
   reference-manual-runtime                      reference-manual-runtime.md:1                   Miscellaneous Runtime
     chapter_rcfile                              rcfile.md:1                                     Runtime Configuration File (rcfile)
     chapter_attach_gdb                          attach_gdb.md:1                                 Starting A gdb Session From A Running Program
