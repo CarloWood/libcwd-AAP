@@ -1,0 +1,7 @@
+Standardize the Doxygen markup style in the C++ source (src/*.cxx and include/libcwd/*.h, including *.inl.h) to match the style already established in doc/*.md, which serves as the reference. doc/*.md has already been brought up to date, so it is unlikely to need changes; the work is in the source.
+
+Target style:
+- Use the `@` prefix for every Doxygen command (e.g. `@brief`, `@param`, `@return`, `@sa`, `@ref`, `@file`, `@class`, `@fn`, `@def`, `@see`), replacing the `\` form — EXCEPT for `\htmlonly`/`\endhtmlonly`, `\latexonly`/`\endlatexonly`, and the custom aliases `\exampleoutput`/`\endexampleoutput`, `\shellcommand`/`\endshellcommand`, `\filename`/`\endfilename`, which keep the `\` prefix.
+- Prefer common Markdown over HTML tags or Doxygen formatting commands, applied consistently: `` `code` `` (backticks) instead of `\c` / `<code>` / `<CODE>`; ```` ```cpp ... ``` ```` fenced blocks instead of `\code` / `<pre>`; `*italic*` instead of `\em` / `<em>` / `<i>`; `**bold**` instead of `\b` / `<b>` / `<B>`.
+
+The current command inventory (what is used where, and how often) is in the sibling node 02.3's `overview.md`.
