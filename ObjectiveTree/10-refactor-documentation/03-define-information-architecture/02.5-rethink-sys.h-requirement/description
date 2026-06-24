@@ -1,0 +1,1 @@
+Currently libcwd almost enforces that *every* source file (.cxx) begins with #include "sys.h". I want to investigate if that is necessary, and if so why, and if it can be relaxed. The main reason being that it might be a high barrier for new users of the library to make changes to ALL of their .cxx/cpp files.
